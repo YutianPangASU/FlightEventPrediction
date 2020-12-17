@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for s in 4 16 32
+do
+	for h in 0 60 120 180 240
+	do
+		for n in 8 16 32
+		do
+			python AE_model_full_3232.py --smoothing $s --horizon $h --nf $n
+			sleep 30s
+		done
+	done
+done
+
+
