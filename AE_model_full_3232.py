@@ -113,19 +113,19 @@ class AutoEncoder(nn.Module):  # input res=32, output res=32, nc=2
 
 
 if __name__ == '__main__':
-    smoothing = 4
-    horizon = 60
-    nf = 32
+    #smoothing = 4
+    #horizon = 60
+    #nf = 32
 
     # # run with shell inputs
-    # parser = argparse.ArgumentParser(description='Code Inputs.')
-    # parser.add_argument('--smoothing', type=int, nargs='+', metavar='SMOOTHING')
-    # parser.add_argument('--horizon', type=int, nargs='+', metavar='HORIZON')
-    # parser.add_argument('--nf', type=int, nargs='+', metavar='NF')
-    # args = parser.parse_args()
-    # smoothing = args.smoothing[0]
-    # horizon = args.horizon[0]
-    # nf = args.nf[0]
+    parser = argparse.ArgumentParser(description='Code Inputs.')
+    parser.add_argument('--smoothing', type=int, nargs='+', metavar='SMOOTHING')
+    parser.add_argument('--horizon', type=int, nargs='+', metavar='HORIZON')
+    parser.add_argument('--nf', type=int, nargs='+', metavar='NF')
+    args = parser.parse_args()
+    smoothing = args.smoothing[0]
+    horizon = args.horizon[0]
+    nf = args.nf[0]
 
     batch_size = 1
     test_ratio = 0.05
